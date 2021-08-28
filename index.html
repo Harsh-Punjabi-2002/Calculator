@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator by harsh</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>simple/compound interest calculator</h1>
+    <!-- <p>this is a simple interest calculator using formula </p> -->
+    <div class="container" style="display: flex;">
+        <div class="simple_interest">
+            <h2>simple interest calculator</h2>
+            <p>
+                <a href="simple_interest.html" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi_SBSLd-xlQoc35b4O6yVnPBxMX2wDioQtg&usqp=CAU"
+                        alt="simple intresr">
+                </a>
+            </p>
+            <!-- <label for="Principle">
+                <input type="number" placeholder="enter amount">
+            </label>
+            <label for="rate">
+                <input type="number" placeholder="rate">
+            </label>
+            <label for="time">
+                <input type="number" placeholder="time in years">
+            </label> -->
+            <a href="simple_interest.html"><button class="calculate">calculate</button></a>
+            <!-- <div id="output"></div> -->
+        </div>
+        <div class="compound_interest">
+            <h2>compound interest calculator</h2>
+            <p>
+                <a href="compound_interest.html" >
+            <img src="data:image/png;base64,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"
+                alt="compound">
+            </a>
+            </p>
+            <!-- <label for="Principle">
+                <input type="number" placeholder="enter amount">
+            </label>
+            <label for="rate">
+                <input type="number" placeholder="rate">
+            </label>
+            <label for="time">
+                <input type="number" placeholder="time in years">
+            </label> -->
+            <a href="compound_interest.html"><button class="calculate">calculate</button></a>
+            <!-- <div id="output"></div> -->
+        </div>
+    </div>
+
+</body>
+
+</html>
